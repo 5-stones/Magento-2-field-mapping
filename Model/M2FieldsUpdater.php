@@ -13,7 +13,7 @@
 
 namespace Gigya\Gigya_FieldMapping\Model;
 
-use Gigya\CmsStarterKit\fieldMapping;
+use Gigya\CmsStarterKit\FieldMapping;
 
 class M2FieldsUpdater extends fieldMapping\CmsUpdater
 {
@@ -44,7 +44,7 @@ class M2FieldsUpdater extends fieldMapping\CmsUpdater
      */
     public function setAccountValues(&$account) {
         foreach ($this->getGigyaMapping() as $gigyaName => $confs) {
-            /** @var Gigya\CmsStarterKit\fieldMapping\ConfItem $conf */
+            /** @var Gigya\CmsStarterKit\FieldMapping\ConfItem $conf */
             $value = parent::getValueFromGigyaAccount($gigyaName); // e.g: loginProvider = facebook
             // if no value found, log and skip field
             if (is_null($value)) {

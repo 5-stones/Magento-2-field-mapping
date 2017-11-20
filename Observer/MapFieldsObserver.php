@@ -49,7 +49,7 @@ class MapFieldsObserver implements ObserverInterface
             // get field mapping from cache or file
             try {
                 $this->setFieldMapping();
-            } catch (\Gigya\CmsStarterKit\fieldMapping\CmsUpdaterException $e) {
+            } catch (\Gigya\CmsStarterKit\FieldMapping\CmsUpdaterException $e) {
                 $this->gigyaLog(
                     "error " . $e->getCode() . ". message: " . $e->getMessage() . ". File: " .$e->getFile(),
                     __CLASS__ , __FUNCTION__
